@@ -1,0 +1,211 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"> <!-- displays site properly based on user's device -->
+
+  <link rel="icon" type="image/png" sizes="32x32" href="./images/favicon-32x32.png">
+  
+  <link rel="stylesheet" href="./sass/main.css">
+  <title>Frontend Mentor | Multi-step form</title>
+
+</head>
+<body>
+
+  <nav>
+    <div class="nav-step">
+      <div role="button" class="current-step">1</div>
+      <span>Step 1</span>
+      <span>Your info</span>
+    </div>
+
+    <div class="nav-step">
+      <div role="button">2</div>
+      <span>Step 2</span>
+      <span>Select plan</span>
+    </div>
+
+    <div class="nav-step">
+      <div role="button">3</div>
+      <span>Step 3</span>
+      <span>Add-ons</span>
+    </div>
+
+    <div class="nav-step">
+      <div role="button">4</div>
+      <span>Step 4</span>
+      <span>Summary</span>
+    </div>
+  </nav>
+
+    <!-- Step 1 start -->
+    <div class="main-grid-container">
+      <section class="step-1">
+        <div class="header">
+          <h2>Personal info</h2>
+          <p class="p-intro">Please provide your name, email address, and phone number.</p>
+        </div>
+      
+        <div class="input-group">
+          <div class="flex-space-between">
+            <label for="name">Name</label>
+            <p>This field is required</p>
+          </div>
+          <input value="Alphonse Brown" required id="name" type="text" placeholder="e.g. Stephen King">
+        </div>
+        <div class="input-group">
+          <div class="flex-space-between">
+            <label for="email">Email Address</label>
+            <p>This field is required</p>
+          </div>
+          <input value="alph.brown@gmail.com" required id="email" type="text" placeholder="e.g. stephenking@lorem.com">
+        </div>
+        <div class="input-group">
+          <div class="flex-space-between">
+            <label for="phoneNumber">Phone Number</label>
+            <p>This field is required</p>
+          </div>
+          <input value="+1 234 567 890" required id="phoneNumber" type="text" placeholder="e.g. +1 234 567 890">
+        </div>
+      </section>
+        <!--Step 1 end -->
+      <!-- Step 2 start -->
+      <section class="step-2">
+        <div class="header">
+          <h2>Select your plan</h2>
+          <p class="p-intro">You have the plan of monthly or yearly billing.</p>
+        </div>
+      
+        <div data-value="Arcade-9" class="plan selected-plan">
+          <img src="./assets/images/icon-arcade.svg" alt="arcade icon">
+          <div class="plan-content-wrapper">
+            <h3>Arcade</h3>
+            <div class="changing-content">
+              <p>$9/mo</p>
+            </div>
+          </div>
+        </div>
+        <div data-value="Advanced-12" class="plan">
+          <img src="./assets/images/icon-advanced.svg" alt="advanced icon">
+          <div class="plan-content-wrapper">
+            <h3>Advanced</h3>
+            <div class="changing-content">
+              <p>$12/mo</p>
+            </div>
+          </div>
+        </div>
+        <div data-value="Pro-15" class="plan">
+          <img src="./assets/images/icon-pro.svg" alt="pro icon">
+          <div class="plan-content-wrapper">
+            <h3>Pro</h3>
+            <div class="changing-content">
+              <p>$15/mo</p>
+            </div>
+          </div>
+        </div>
+        <div class="toggle-recurrence-container">
+          <p class="monthly-plans toggled">Monthly</p>
+          <div class="toggle-recurrence-btn" role="button">
+            <div class="toggle-btn-circle"></div>
+          </div>
+      
+          <p class="yearly-plans">Yearly</p>
+        </div>
+      </section>
+      <!-- Step 2 end -->
+      <!-- Step 3 start -->
+      <section class="step-3">
+        <div class="header">
+          <h2>Pick add-ons</h2>
+          <p class="p-intro">Add-ons help enhance your gaming experience.</p>
+        </div>
+        <div data-value="Online service-1" class="add-on selected-add-on">
+          <div class="check-box">
+            <img src="./assets/images/icon-checkmark.svg" alt="check mark">
+          </div>
+          <h3>Online service</h3>
+          <p>Access to multiplayer games</p>
+          <div class="add-on-price">+$1/mo</div>
+        </div>
+        <div data-value="Larger storage-2" class="add-on selected-add-on">
+          <div class="check-box">
+            <img src="./assets/images/icon-checkmark.svg" alt="check mark">
+          </div>
+          <h3>Larger storage</h3>
+          <p>Extra 1TB of cloud save</p>
+          <div class="add-on-price">+$2/mo</div>
+        </div>
+        <div data-value="Customizable profile-2" class="add-on">
+          <div class="check-box">
+            <img src="./assets/images/icon-checkmark.svg" alt="check mark">
+          </div>
+          <h3>Customizable profile</h3>
+          <p>Custom theme on your profile</p>
+          <div class="add-on-price">+$2/mo</div>
+        </div>
+      </section>
+      <!-- Step 3 end -->
+      <!-- Step 4 start -->
+      <section class="step-4">
+        <div class="header">
+          <h2>Finishing up</h2>
+          <p class="p-intro">Double-check everything looks OK before confirming.</p>
+        </div>
+        <div class="summary-details">
+          <div class="summary-plan flex-space-between">
+            <div>
+              <h3>Arcade (Monthly)</h3>
+              <button id="changePlan">Change</button>
+            </div>
+            <p class="plan-price">$9/mo</p>
+          </div>
+          <div class="summary-add-ons">
+            <div class="flex-space-between">
+              <p class="add-on-title">Online service</p>
+              <p class="add-on-price">+$1/mo</p>
+            </div>
+            <div class="flex-space-between">
+              <p class="add-on-title">Larger storage</p>
+              <p class="add-on-price">+$2/mo</p>
+            </div>
+          </div>
+        </div>
+        <div class="summary-total flex-space-between">
+          <p>Total (per <span class="reccurence-indicator">month</span>)</p>
+          <p class="total-price">+$12/mo</p>
+        </div>
+      </section>
+      <!-- Step 4 end -->
+      <!-- Step 5 start -->
+      <section class="step-5">
+        <img src="./assets/images/icon-thank-you.svg" alt="icon thank you">
+        <div class="header">
+          <h2>Thank you!</h2>
+          <p class="p-intro">
+            Thanks for confirming your subscription! We hope you have fun
+            using our platform. If you ever need support, please feel free
+            to email us at support@loremgaming.com.
+          </p>
+        </div>
+      </section>
+      
+      
+        <!-- Step 5 end -->
+        
+        <footer>
+      <button class="back-button">
+        Go Back
+      </button>
+      <button class="next-button">
+        Next Step
+      </button>
+        </footer>
+    </div>
+  <div class="attribution">
+    Challenge by <a href="https://www.frontendmentor.io?ref=challenge" target="_blank">Frontend Mentor</a>. 
+    Coded by <a href="#">Your Name Here</a>.
+  </div>
+
+  <script type="module" src="./js/main.js"></script>
+</body>
+</html>
